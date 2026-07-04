@@ -80,7 +80,9 @@ export default function ImageAnalyzer() {
         {isCleaned && !removing && (
           <div className="flex items-center gap-3 bg-lime-400/10 border border-lime-400/20 p-3 rounded-xl">
             <span className="text-lime-400 text-sm font-medium flex-1">✓ Metadata stripped successfully.</span>
-            <button onClick={handleDownload} className="bg-lime-400 text-black text-xs font-black px-5 py-2 rounded-full hover:shadow-[0_0_20px_rgba(163,230,53,0.4)] transition-all duration-300 uppercase tracking-wider">
+            <button 
+            data-umami-event="downloaded_image"
+            onClick={handleDownload} className="bg-lime-400 text-black text-xs font-black px-5 py-2 rounded-full hover:shadow-[0_0_20px_rgba(163,230,53,0.4)] transition-all duration-300 uppercase tracking-wider">
               Download
             </button>
           </div>
@@ -109,7 +111,9 @@ export default function ImageAnalyzer() {
             )}
 
             {result.has_ai && (
-              <button onClick={handleRemove} disabled={removing} className="w-full py-3.5 bg-lime-400 hover:bg-lime-300 text-black text-sm font-black rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed uppercase tracking-wider hover:shadow-[0_0_30px_rgba(163,230,53,0.3)]">
+              <button 
+              data-umami-event="strip_metadata"
+              onClick={handleRemove} disabled={removing} className="w-full py-3.5 bg-lime-400 hover:bg-lime-300 text-black text-sm font-black rounded-full transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed uppercase tracking-wider hover:shadow-[0_0_30px_rgba(163,230,53,0.3)]">
                 {removing ? 'PROCESSING...' : 'REMOVE AI METADATA'}
               </button>
             )}

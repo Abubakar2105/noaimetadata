@@ -10,8 +10,8 @@ export default function Home() {
       
       {/* Hero + Tool Wrapper with Ambient Glows */}
       <div className="relative">
-        <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-lime-500/20 rounded-full blur-[150px] pointer-events-none"></div>
-        <div className="absolute top-[20%] right-[-15%] w-[500px] h-[500px] bg-emerald-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-150 h-150 bg-lime-500/20 rounded-full blur-[150px] pointer-events-none"></div>
+        <div className="absolute top-[20%] right-[-15%] w-125 h-125 bg-emerald-500/15 rounded-full blur-[130px] pointer-events-none"></div>
         
         <header className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 space-y-6">
           <p className="text-xs font-bold tracking-[0.3em] text-lime-400 uppercase">Secure & Private</p>
@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Heavy SEO Text Blocks */}
       <div className="relative bg-grid">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="relative z-10">
           <SeoContent />
         </div>
