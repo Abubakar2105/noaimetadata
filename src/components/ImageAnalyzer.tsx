@@ -54,7 +54,7 @@ export default function ImageAnalyzer() {
       <div className="h-[400px] md:h-[500px] w-full relative bg-transparent flex items-center justify-center overflow-hidden">
         {!preview ? (
           <label className="cursor-pointer w-full h-full flex flex-col items-center justify-center border-2 border-dashed border-white/10 hover:border-lime-400/50 hover:bg-lime-400/5 transition-all duration-700 group">
-            <input ref={inputRef} type="file" accept="image/png,image/jpeg" onChange={handleSelect} className="hidden" />
+            <input data-umami-event="uploaded_image" ref={inputRef} type="file" accept="image/png,image/jpeg" onChange={handleSelect} className="hidden" />
             <div className="w-16 h-16 rounded-full border-2 border-white/10 group-hover:border-lime-400/50 flex items-center justify-center mb-6 transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(163,230,53,0.2)]">
               <svg className="w-6 h-6 text-white/40 group-hover:text-lime-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
             </div>
