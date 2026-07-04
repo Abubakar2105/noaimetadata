@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   description:
     "Instantly remove AI metadata, C2PA Content Credentials, EXIF, XMP, and AI-generated tags from PNG and JPEG images. Free, secure, and private.",
 
+    verification: {
+    google: "MroX9Sseih8sS5KwSjGgTcwNznoK8xAc-tbST_FWz6w",
+  },
   openGraph: {
     title: "NoAIMetadata — Remove AI Metadata from Images",
     description:
@@ -34,6 +37,8 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+
+  
 
   twitter: {
     card: "summary_large_image",
