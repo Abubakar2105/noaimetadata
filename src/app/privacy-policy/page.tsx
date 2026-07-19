@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: "Privacy Policy", description: "Privacy Policy for AI Metadata Remover." };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy for NoAIMetadata. We do not store your images or log your prompts.",
+  alternates: { canonical: "/privacy-policy" },
+};
 
 export default function PrivacyPolicy() {
   return (

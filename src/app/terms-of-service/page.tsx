@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 
-export const metadata: Metadata = { title: "Terms of Service", description: "Terms of Service for AI Metadata Remover." };
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "Terms of Service for NoAIMetadata.",
+  alternates: { canonical: "/terms-of-service" },
+};
 
 export default function TermsOfService() {
   return (
@@ -11,7 +15,7 @@ export default function TermsOfService() {
       <div className="space-y-8 text-white/50 leading-relaxed text-sm">
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-white/80">1. Acceptance of Terms</h2>
-          <p>By accessing and using MetaStrip (AI Metadata Remover), you agree to be bound by these Terms. If you do not agree, do not use the service.</p>
+          <p>By accessing and using NoAIMetadata, you agree to be bound by these Terms. If you do not agree, do not use the service.</p>
         </section>
 
         <section className="space-y-3">

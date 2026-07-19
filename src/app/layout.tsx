@@ -4,48 +4,55 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
+import { SITE, siteGraph } from "@/lib/seo";
 
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://noaimetadata.vercel.app"), 
+  metadataBase: new URL(SITE.url),
 
   title: {
-    default: "NoAIMetadata — Remove AI Metadata from Images",
+    default: "NoAIMetadata — Remove AI Metadata & C2PA from Images",
     template: "%s | NoAIMetadata",
   },
 
   description:
     "Instantly remove AI metadata, C2PA Content Credentials, EXIF, XMP, and AI-generated tags from PNG and JPEG images. Free, secure, and private.",
 
-    verification: {
+  keywords: [
+    "remove AI metadata",
+    "remove C2PA metadata",
+    "strip AI metadata",
+    "remove Content Credentials",
+    "remove EXIF data",
+    "remove Midjourney metadata",
+    "remove Stable Diffusion parameters",
+    "remove DALL-E metadata",
+    "AI metadata remover",
+    "strip C2PA from PNG",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  verification: {
     google: "MroX9Sseih8sS5KwSjGgTcwNznoK8xAc-tbST_FWz6w",
   },
   openGraph: {
-    title: "NoAIMetadata — Remove AI Metadata from Images",
+    title: "NoAIMetadata — Remove AI Metadata & C2PA from Images",
     description:
       "Remove AI metadata, C2PA Content Credentials, EXIF, XMP, and AI-generated tags from images in seconds.",
-    url: "https://noaimetadata.vercel.app",
-    siteName: "NoAIMetadata",
-    images: [
-      {
-        url: "/preview.jpg",
-        width: 1200,
-        height: 630,
-        alt: "NoAIMetadata - Remove AI Metadata from Images",
-      },
-    ],
+    url: SITE.url,
+    siteName: SITE.name,
     type: "website",
   },
 
-  
-
   twitter: {
     card: "summary_large_image",
-    title: "NoAIMetadata — Remove AI Metadata from Images",
+    title: "NoAIMetadata — Remove AI Metadata & C2PA from Images",
     description:
       "Remove AI metadata, C2PA Content Credentials, EXIF, XMP, and AI-generated tags from images instantly.",
-    images: ["/preview.jpg"],
   },
 };
 
@@ -62,6 +69,10 @@ export default function RootLayout({
   strategy="afterInteractive"
 />
       <body className="bg-black text-white antialiased font-sans flex flex-col min-h-screen">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

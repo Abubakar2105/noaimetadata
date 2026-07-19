@@ -2,7 +2,8 @@ import ImageAnalyzer from '@/components/ImageAnalyzer';
 import HowItWorks from '@/components/HowItWorks';
 import SeoContent from '@/components/SeoContent';
 import FAQ from '@/components/FAQ';
-import Link from 'next/link'; // Add this import
+import Link from 'next/link';
+import { GUIDES } from '@/lib/guides';
 
 export default function Home() {
   return (
@@ -41,6 +42,32 @@ export default function Home() {
       {/* Process */}
       <div className="max-w-6xl mx-auto px-6 pb-24">
         <HowItWorks />
+      </div>
+
+      {/* Guides — internal links to long-tail landing pages */}
+      <div className="max-w-6xl mx-auto px-6 pb-24">
+        <div className="border-t border-white/5 pt-16">
+          <p className="text-xs font-bold tracking-[0.3em] text-lime-400 uppercase mb-4">Guides</p>
+          <h2 className="text-4xl font-black tracking-tighter mb-10 leading-[0.9]">
+            Remove metadata by type
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {GUIDES.map((g) => (
+              <Link
+                key={g.slug}
+                href={`/remove/${g.slug}`}
+                className="border border-white/5 p-6 rounded-2xl hover:border-lime-400/20 transition-colors group"
+              >
+                <h3 className="text-sm font-bold text-white/80 group-hover:text-lime-400 transition-colors">
+                  {g.title}
+                </h3>
+                <p className="text-xs text-white/30 mt-2 leading-relaxed">
+                  {g.metaDescription}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* FAQ Schema */}

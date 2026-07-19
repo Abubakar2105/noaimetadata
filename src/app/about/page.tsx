@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn why we built Noaimetadata and our commitment to digital privacy and artist rights."
+  description: "Learn why we built NoAIMetadata and our commitment to digital privacy and artist rights.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
